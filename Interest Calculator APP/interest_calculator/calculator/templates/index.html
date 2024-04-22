@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interest Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculator-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555555;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #66aabb;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #5599aa;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #777777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Developed By Shubhangi Pawar (22112038)</h1>
+    </header>
+    <div class="calculator-container">
+        <h2>Interest Calculator</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label for="id_principal_amount">Principal Amount:</label>
+            <input type="number" id="id_principal_amount" name="principal_amount" required>
+            <label for="id_interest_rate">Interest Rate (%):</label>
+            <input type="number" id="id_interest_rate" name="interest_rate" required>
+            <label for="id_time_period">Time Period (years):</label>
+            <input type="number" id="id_time_period" name="time_period" required>
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+    <footer>
+        <p>Developed By Shubhangi Pawar (22112038)</p>
+    </footer>
+</body>
+</html>
